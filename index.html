@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escola de Saúde Pública de Florianópolis</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .quiz-option.selected {
+            background-color: #3b82f6;
+            color: white;
+        }
+        .quiz-option.correct {
+            background-color: #22c55e;
+            color: white;
+        }
+        .quiz-option.incorrect {
+            background-color: #ef4444;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Container Principal -->
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <!-- Cabeçalho -->
+        <header class="text-center bg-white p-8 rounded-2xl shadow-md mb-10 border border-gray-200 max-w-5xl mx-auto">
+            <p class="text-2xl md:text-3xl font-semibold text-gray-700">Escola de Saúde Pública de Florianópolis</p>
+            <h1 class="text-3xl md:text-4xl font-bold text-blue-800 my-3">Novos conceitos para estruturação do Sistema de Saúde</h1>
+            <p class="text-xl md:text-2xl text-gray-700">Um guia para você entender sobre VBHC e Triple Aim</p>
+        </header>
+
+        <main class="space-y-12">
+
+            <!-- Seção 1: Vídeo Principal -->
+            <section id="video-principal" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Assista ao vídeo:</h2>
+                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg mx-auto">
+                    <iframe src="https://www.youtube.com/embed/f1XU3f1j7Eo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <!-- Seção 2: Aprofundamento -->
+            <section id="aprofundamento" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Aprofunde-se nos conceitos</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Caso queira aprofundar-se nos conceitos apresentados assista aos vídeos e/ou leia o texto disponibilizados à seguir:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="video-container">
+                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Value-Based Health Care – Introdução (2 min)</h3>
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                           <iframe src="https://www.youtube.com/embed/oNtNkHwx7TY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Value-Based Health Care – Entrevista (12 min)</h3>
+                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                           <iframe src="https://www.youtube.com/embed/2tWINM5xWAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="video-container">
+                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Triple Aim – Introdução (3 min)</h3>
+                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                           <iframe src="https://www.youtube.com/embed/OjN_iE9GaFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                     <div class="video-container">
+                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Triple Aim – Complementação (2 min)</h3>
+                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                           <iframe src="https://www.youtube.com/embed/KrmbhmSf2bM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+                 <div class="text-center mt-8">
+                    <a href="https://drive.google.com/file/d/17Mz9Hx72A4Z778DCsGsokr1g74dFLfoY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                        Resumo sobre VBHC e Triple Aim (PDF)
+                    </a>
+                </div>
+            </section>
+
+            <!-- Seção 3: Formulário -->
+            <section id="formulario" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Análise e Reflexão</h2>
+                <p class="text-gray-600 mb-6">Como atividade reflexiva acesse o formulário disponível no botão abaixo e responda as questões, relacionando os conceitos apresentados com a realidade de seu serviço de saúde.</p>
+                
+                <div class="text-center mb-8">
+                    <!-- IMPORTANTE: Substitua a URL abaixo pelo link do seu formulário do Google -->
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md">
+                        Acessar Formulário de Análise
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Seção 4: Quiz -->
+            <section id="quiz" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
+                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Teste seus conhecimentos</h2>
+                <div id="quiz-container" class="max-w-2xl mx-auto">
+                    <!-- As perguntas do quiz serão inseridas aqui pelo JavaScript -->
+                </div>
+                <div id="quiz-results" class="text-center mt-6 hidden">
+                    <h3 class="text-xl font-bold">Resultados</h3>
+                    <p id="score" class="text-lg"></p>
+                    <button id="restart-quiz" class="mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                        Tentar Novamente
+                    </button>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="text-center mt-12 py-6 border-t border-gray-200 max-w-5xl mx-auto">
+            <p class="text-gray-500">&copy; 2024 Escola de Saúde Pública de Florianópolis. Todos os direitos reservados.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                question: "Qual é o principal objetivo do Value-Based Health Care (VBHC)?",
+                options: [
+                    "Aumentar o número de procedimentos médicos realizados.",
+                    "Maximizar o valor entregue ao paciente, equilibrando resultados de saúde e custos.",
+                    "Reduzir exclusivamente os custos hospitalares, sem considerar os resultados.",
+                    "Focar apenas na satisfação da equipe de saúde."
+                ],
+                answer: "Maximizar o valor entregue ao paciente, equilibrando resultados de saúde e custos.",
+                feedback: "<strong>Correto!</strong> O VBHC foca em otimizar a relação entre os resultados que importam para o paciente e os custos totais do tratamento, buscando o máximo de valor."
+            },
+            {
+                question: "Quem são os principais idealizadores do conceito de VBHC?",
+                options: [
+                    "Donald Berwick e Tom Nolan",
+                    "Michael E. Porter e Elizabeth Olmsted Teisberg",
+                    "John Whittington e Elliott Fisher",
+                    "Bill Gates e Steve Jobs"
+                ],
+                answer: "Michael E. Porter e Elizabeth Olmsted Teisberg",
+                feedback: "<strong>Exato!</strong> Michael Porter e Elizabeth Teisberg, da Harvard Business School, introduziram o conceito no livro 'Redefining Health Care' em 2006."
+            },
+            {
+                question: "Quais são os três pilares do Triple Aim?",
+                options: [
+                    "Tecnologia, Inovação e Lucratividade.",
+                    "Melhoria da experiência do paciente, melhoria da saúde da população e redução de custos per capita.",
+                    "Aumento de salários, redução de horas de trabalho e mais férias.",
+                    "Construção de hospitais, compra de equipamentos e contratação de médicos."
+                ],
+                answer: "Melhoria da experiência do paciente, melhoria da saúde da população e redução de custos per capita.",
+                feedback: "<strong>Isso mesmo!</strong> O Triple Aim busca melhorar simultaneamente a experiência do cuidado, a saúde da população e a eficiência do sistema, reduzindo o custo por pessoa."
+            },
+            {
+                question: "O que a equação de valor do VBHC (Valor = Resultados / Custos) representa?",
+                options: [
+                    "Que o valor aumenta apenas se os custos diminuem.",
+                    "Que o valor é determinado pelo volume de atendimentos.",
+                    "Que o valor é a relação entre a qualidade dos resultados de saúde e o custo total para alcançá-los.",
+                    "Que os resultados são menos importantes que os custos."
+                ],
+                answer: "Que o valor é a relação entre a qualidade dos resultados de saúde e o custo total para alcançá-los.",
+                feedback: "<strong>Perfeito!</strong> A equação demonstra que o valor aumenta quando os resultados para os pacientes melhoram e/ou quando os custos para alcançar esses resultados são otimizados."
+            },
+            {
+                question: "Qual organização desenvolveu o conceito de Triple Aim?",
+                options: [
+                    "Organização Mundial da Saúde (OMS)",
+                    "Harvard Business School",
+                    "Institute for Healthcare Improvement (IHI)",
+                    "National Health Service (NHS)"
+                ],
+                answer: "Institute for Healthcare Improvement (IHI)",
+                feedback: "<strong>Correto!</strong> O IHI, liderado por Donald Berwick, Tom Nolan e John Whittington, introduziu o Triple Aim em 2008 para reformular os sistemas de saúde."
+            },
+            {
+                question: "O que são 'Bundled Payments' (Pagamentos Agrupados)?",
+                options: [
+                    "Um pagamento por cada serviço individualmente prestado.",
+                    "Um salário fixo mensal para os médicos, independentemente do desempenho.",
+                    "Um pagamento único que cobre todos os serviços relacionados a um episódio de cuidado específico.",
+                    "Um bônus anual para hospitais que atendem mais pacientes."
+                ],
+                answer: "Um pagamento único que cobre todos os serviços relacionados a um episódio de cuidado específico.",
+                feedback: "<strong>Exato!</strong> Esse modelo de remuneração incentiva a coordenação e a eficiência, pois o pagamento é fixo para todo o ciclo de tratamento de uma condição."
+            },
+             {
+                question: "Qual das seguintes opções é um desafio-chave na implementação do VBHC?",
+                options: [
+                    "A falta de doenças para tratar.",
+                    "A resistência à mudança cultural, saindo de um modelo de pagamento por volume.",
+                    "O excesso de tecnologia disponível nos hospitais.",
+                    "A baixa demanda por serviços de saúde."
+                ],
+                answer: "A resistência à mudança cultural, saindo de um modelo de pagamento por volume.",
+                feedback: "<strong>Isso mesmo!</strong> Mudar a mentalidade de um sistema focado em quantidade (fee-for-service) para um focado em valor e resultados é um dos maiores obstáculos."
+            },
+            {
+                question: "As Accountable Care Organizations (ACOs) são um exemplo prático de iniciativa alinhada a quais conceitos?",
+                options: [
+                    "Apenas ao Fee-for-Service.",
+                    "Apenas à gestão hospitalar tradicional.",
+                    "Tanto ao VBHC quanto ao Triple Aim.",
+                    "A nenhum dos dois conceitos."
+                ],
+                answer: "Tanto ao VBHC quanto ao Triple Aim.",
+                feedback: "<strong>Correto!</strong> As ACOs buscam fornecer cuidados coordenados e de alta qualidade de forma eficiente, alinhando-se aos objetivos de ambos os modelos."
+            },
+            {
+                question: "O que o Triple Aim pode se tornar ao incorporar pilares como 'Satisfação dos Profissionais' e 'Equidade'?",
+                options: [
+                    "Double Aim",
+                    "Quadruple ou Quintuple Aim",
+                    "Hexagonal Aim",
+                    "Micro Aim"
+                ],
+                answer: "Quadruple ou Quintuple Aim",
+                feedback: "<strong>Perfeito!</strong> A evolução do conceito reconhece a importância do bem-estar dos profissionais (Quadruple Aim) e da equidade (Quintuple Aim) para um sistema de saúde sustentável."
+            },
+            {
+                question: "Qual é o papel da ICHOM (International Consortium for Health Outcomes Measurement) no contexto do VBHC?",
+                options: [
+                    "Financiar a construção de hospitais públicos.",
+                    "Desenvolver indicadores padronizados para medir e comparar resultados de saúde.",
+                    "Regular os preços de medicamentos em nível global.",
+                    "Treinar exclusivamente equipes de enfermagem."
+                ],
+                answer: "Desenvolver indicadores padronizados para medir e comparar resultados de saúde.",
+                feedback: "<strong>Exato!</strong> A padronização da ICHOM é fundamental para medir, comparar e melhorar os resultados que realmente importam para os pacientes de forma consistente."
+            }
+        ];
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let userAnswers = [];
+
+        const quizContainer = document.getElementById('quiz-container');
+        const resultsContainer = document.getElementById('quiz-results');
+        const scoreElement = document.getElementById('score');
+        const restartButton = document.getElementById('restart-quiz');
+
+        function loadQuestion() {
+            if (currentQuestionIndex < quizData.length) {
+                const currentQuestion = quizData[currentQuestionIndex];
+                quizContainer.innerHTML = `
+                    <div class="mb-4">
+                        <p class="text-lg font-semibold">${currentQuestionIndex + 1}. ${currentQuestion.question}</p>
+                    </div>
+                    <div class="space-y-3">
+                        ${currentQuestion.options.map((option, index) => `
+                            <button class="quiz-option w-full text-left p-4 border border-gray-300 rounded-lg hover:bg-blue-100 transition duration-200" data-option="${option}">
+                                ${option}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div class="mt-6 text-right">
+                        <button id="next-btn" class="bg-gray-400 text-white font-bold py-2 px-6 rounded-lg cursor-not-allowed" disabled>
+                            Próxima
+                        </button>
+                    </div>
+                `;
+
+                const options = quizContainer.querySelectorAll('.quiz-option');
+                const nextBtn = document.getElementById('next-btn');
+                
+                let selectedOption = null;
+
+                options.forEach(option => {
+                    option.addEventListener('click', () => {
+                        options.forEach(opt => opt.classList.remove('selected'));
+                        option.classList.add('selected');
+                        selectedOption = option.dataset.option;
+                        
+                        nextBtn.disabled = false;
+                        nextBtn.classList.remove('bg-gray-400', 'cursor-not-allowed');
+                        nextBtn.classList.add('bg-blue-600', 'hover:bg-blue-700');
+                    });
+                });
+
+                nextBtn.addEventListener('click', () => {
+                     if (selectedOption) {
+                        userAnswers[currentQuestionIndex] = selectedOption;
+                        const currentQuestion = quizData[currentQuestionIndex];
+                        const correct = selectedOption === currentQuestion.answer;
+                        if (correct) {
+                            score++;
+                        }
+                        
+                        // Desabilita opções e mostra cores de certo/errado
+                        options.forEach(option => {
+                            option.disabled = true;
+                            if(option.dataset.option === currentQuestion.answer) {
+                                option.classList.add('correct');
+                            } else if (option.dataset.option === selectedOption) {
+                                option.classList.add('incorrect');
+                            }
+                        });
+                        
+                        // Cria e insere o container de feedback
+                        const feedbackContainer = document.createElement('div');
+                        feedbackContainer.className = 'mt-4 p-4 rounded-lg text-base text-left';
+                        if (correct) {
+                            feedbackContainer.classList.add('bg-green-100', 'text-green-800', 'border', 'border-green-200');
+                            feedbackContainer.innerHTML = currentQuestion.feedback;
+                        } else {
+                            feedbackContainer.classList.add('bg-red-100', 'text-red-800', 'border', 'border-red-200');
+                            feedbackContainer.innerHTML = `<strong>Incorreto.</strong> ${currentQuestion.feedback}`;
+                        }
+                        quizContainer.querySelector('.space-y-3').insertAdjacentElement('afterend', feedbackContainer);
+
+                        // Atualiza o botão 'Próxima' para avançar para a próxima questão
+                        nextBtn.textContent = currentQuestionIndex === quizData.length - 1 ? 'Ver Resultados' : 'Próxima';
+                        nextBtn.onclick = () => {
+                             currentQuestionIndex++;
+                             loadQuestion();
+                        };
+                    }
+                });
+
+
+            } else {
+                showResults();
+            }
+        }
+
+        function showResults() {
+            quizContainer.classList.add('hidden');
+            resultsContainer.classList.remove('hidden');
+            scoreElement.textContent = `Você acertou ${score} de ${quizData.length} perguntas!`;
+        }
+
+        restartButton.addEventListener('click', () => {
+            currentQuestionIndex = 0;
+            score = 0;
+            userAnswers = [];
+            resultsContainer.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            loadQuestion();
+        });
+
+        loadQuestion();
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+

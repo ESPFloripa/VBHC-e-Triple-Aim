@@ -26,101 +26,176 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-    <!-- Container Principal -->
-    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+    <!-- Tela de Senha -->
+    <div id="password-overlay" class="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center z-50">
+        <div class="bg-white p-8 rounded-2xl shadow-lg w-full max-w-sm text-center transform transition-all scale-95 opacity-0 animate-fade-in-up">
+            <h2 class="text-2xl font-bold mb-4 text-gray-800">Acesso Restrito</h2>
+            <p class="text-gray-600 mb-6">Por favor, insira a senha para continuar.</p>
+            <form id="password-form">
+                <input type="password" id="password-input" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500 text-center" placeholder="******">
+                <p id="error-message" class="text-red-500 text-sm mb-4 hidden">Senha incorreta. Tente novamente.</p>
+                <button type="submit" class="w-full bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                    Entrar
+                </button>
+            </form>
+        </div>
+        <style>
+            @keyframes fade-in-up {
+                from {
+                    opacity: 0;
+                    transform: scale(0.95) translateY(10px);
+                }
+                to {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+            }
+            .animate-fade-in-up {
+                animation: fade-in-up 0.3s ease-out forwards;
+            }
+        </style>
+    </div>
 
-        <!-- Cabeçalho -->
-        <header class="text-center bg-white p-8 rounded-2xl shadow-md mb-10 border border-gray-200 max-w-5xl mx-auto">
-            <p class="text-2xl md:text-3xl font-semibold text-gray-700">Escola de Saúde Pública de Florianópolis</p>
-            <h1 class="text-3xl md:text-4xl font-bold text-blue-800 my-3">Novos conceitos para estruturação do Sistema de Saúde</h1>
-            <p class="text-xl md:text-2xl text-gray-700">Um guia para você entender sobre VBHC e Triple Aim</p>
-        </header>
+    <!-- Conteúdo Principal (inicialmente oculto) -->
+    <div id="main-content" class="hidden">
+        <!-- Container Principal -->
+        <div class="container mx-auto p-4 md:p-8 max-w-7xl">
 
-        <main class="space-y-12">
+            <!-- Cabeçalho -->
+            <header class="text-center bg-blue-800 p-8 rounded-2xl shadow-lg mb-10 max-w-5xl mx-auto">
+                <p class="text-2xl md:text-3xl font-semibold text-blue-200">Escola de Saúde Pública de Florianópolis</p>
+                <h1 class="text-3xl md:text-4xl font-bold text-white my-3">Novos conceitos para estruturação do Sistema de Saúde</h1>
+                <p class="text-xl md:text-2xl text-blue-200">Um guia para você entender sobre VBHC e Triple Aim</p>
+            </header>
 
-            <!-- Seção 1: Vídeo Principal -->
-            <section id="video-principal" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Assista ao vídeo:</h2>
-                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg mx-auto">
-                    <iframe src="https://www.youtube.com/embed/f1XU3f1j7Eo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </section>
+            <main class="space-y-12">
 
-            <!-- Seção 2: Aprofundamento -->
-            <section id="aprofundamento" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Aprofunde-se nos conceitos</h2>
-                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Caso queira aprofundar-se nos conceitos apresentados assista aos vídeos e/ou leia o texto disponibilizados à seguir:</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="video-container">
-                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Value-Based Health Care – Introdução (2 min)</h3>
-                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                           <iframe src="https://www.youtube.com/embed/oNtNkHwx7TY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!-- Seção 1: Vídeo Principal -->
+                <section id="video-principal" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Assista ao vídeo:</h2>
+                    <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg mx-auto">
+                        <iframe src="https://www.youtube.com/embed/f1XU3f1j7Eo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </section>
+
+                <!-- Seção 2: Aprofundamento -->
+                <section id="aprofundamento" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Aprofunde-se nos conceitos</h2>
+                    <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">Caso queira aprofundar-se nos conceitos apresentados assista aos vídeos e/ou leia o texto disponibilizados à seguir:</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div class="video-container">
+                            <h3 class="font-semibold text-lg text-blue-700 mb-2">Value-Based Health Care – Introdução (2 min)</h3>
+                            <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                               <iframe src="https://www.youtube.com/embed/oNtNkHwx7TY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <h3 class="font-semibold text-lg text-blue-700 mb-2">Value-Based Health Care – Entrevista (12 min)</h3>
+                             <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                               <iframe src="https://www.youtube.com/embed/2tWINM5xWAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                        <div class="video-container">
+                            <h3 class="font-semibold text-lg text-blue-700 mb-2">Triple Aim – Introdução (3 min)</h3>
+                             <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                               <iframe src="https://www.youtube.com/embed/OjN_iE9GaFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                         <div class="video-container">
+                            <h3 class="font-semibold text-lg text-blue-700 mb-2">Triple Aim – Complementação (2 min)</h3>
+                             <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
+                               <iframe src="https://www.youtube.com/embed/KrmbhmSf2bM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
                         </div>
                     </div>
-                    <div class="video-container">
-                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Value-Based Health Care – Entrevista (12 min)</h3>
-                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                           <iframe src="https://www.youtube.com/embed/2tWINM5xWAQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                     <div class="text-center mt-8">
+                        <a href="https://drive.google.com/file/d/17Mz9Hx72A4Z778DCsGsokr1g74dFLfoY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
+                            Resumo sobre VBHC e Triple Aim (PDF)
+                        </a>
                     </div>
-                    <div class="video-container">
-                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Triple Aim – Introdução (3 min)</h3>
-                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                           <iframe src="https://www.youtube.com/embed/OjN_iE9GaFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                     <div class="video-container">
-                        <h3 class="font-semibold text-lg text-blue-700 mb-2">Triple Aim – Complementação (2 min)</h3>
-                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-lg">
-                           <iframe src="https://www.youtube.com/embed/KrmbhmSf2bM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
-                 <div class="text-center mt-8">
-                    <a href="https://drive.google.com/file/d/17Mz9Hx72A4Z778DCsGsokr1g74dFLfoY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300 shadow-md">
-                        Resumo sobre VBHC e Triple Aim (PDF)
-                    </a>
-                </div>
-            </section>
+                </section>
 
-            <!-- Seção 3: Formulário -->
-            <section id="formulario" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Análise e Reflexão</h2>
-                <p class="text-gray-600 mb-6">Como atividade reflexiva acesse o formulário disponível no botão abaixo e responda as questões, relacionando os conceitos apresentados com a realidade de seu serviço de saúde.</p>
+                <!-- Seção 3: Formulário -->
+                <section id="formulario" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Análise e Reflexão</h2>
+                    <p class="text-gray-600 mb-6">Como atividade reflexiva acesse o formulário disponível no botão abaixo e responda as questões, relacionando os conceitos apresentados com a realidade de seu serviço de saúde.</p>
+                    
+                    <div class="text-center mb-8">
+                        <!-- IMPORTANTE: Substitua a URL abaixo pelo link do seu formulário do Google -->
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md">
+                            Acessar Formulário de Análise
+                        </a>
+                    </div>
+                </section>
                 
-                <div class="text-center mb-8">
-                    <!-- IMPORTANTE: Substitua a URL abaixo pelo link do seu formulário do Google -->
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSc_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/viewform?usp=sf_link" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 text-white font-bold py-4 px-8 rounded-lg hover:bg-green-700 transition duration-300 text-lg shadow-md">
-                        Acessar Formulário de Análise
-                    </a>
-                </div>
-            </section>
-            
-            <!-- Seção 4: Quiz -->
-            <section id="quiz" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Teste seus conhecimentos</h2>
-                <div id="quiz-container" class="max-w-2xl mx-auto">
-                    <!-- As perguntas do quiz serão inseridas aqui pelo JavaScript -->
-                </div>
-                <div id="quiz-results" class="text-center mt-6 hidden">
-                    <h3 class="text-xl font-bold">Resultados</h3>
-                    <p id="score" class="text-lg"></p>
-                    <button id="restart-quiz" class="mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
-                        Tentar Novamente
-                    </button>
-                </div>
-            </section>
+                <!-- Seção 4: Quiz -->
+                <section id="quiz" class="bg-white p-8 rounded-2xl shadow-md border border-gray-200 max-w-5xl mx-auto">
+                    <h2 class="text-2xl font-semibold text-gray-800 mb-6 text-center">Teste seus conhecimentos</h2>
+                    <div id="quiz-container" class="max-w-2xl mx-auto">
+                        <!-- As perguntas do quiz serão inseridas aqui pelo JavaScript -->
+                    </div>
+                    <div id="quiz-results" class="text-center mt-6 hidden">
+                        <h3 class="text-xl font-bold">Resultados</h3>
+                        <p id="score" class="text-lg"></p>
+                        <button id="restart-quiz" class="mt-4 bg-blue-600 text-white font-bold py-2 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                            Tentar Novamente
+                        </button>
+                    </div>
+                </section>
 
-        </main>
+            </main>
 
-        <!-- Rodapé -->
-        <footer class="text-center mt-12 py-6 border-t border-gray-200 max-w-5xl mx-auto">
-            <p class="text-gray-500">&copy; 2024 Escola de Saúde Pública de Florianópolis. Todos os direitos reservados.</p>
-        </footer>
+            <!-- Rodapé -->
+            <footer class="text-center mt-12 py-6 border-t border-gray-200 max-w-5xl mx-auto">
+                <p class="text-gray-500">&copy; 2024 Escola de Saúde Pública de Florianópolis. Todos os direitos reservados.</p>
+            </footer>
 
+        </div>
     </div>
 
     <script>
+        // Lógica da senha
+        const passwordOverlay = document.getElementById('password-overlay');
+        const passwordForm = document.getElementById('password-form');
+        const passwordInput = document.getElementById('password-input');
+        const errorMessage = document.getElementById('error-message');
+        const mainContent = document.getElementById('main-content');
+        const correctPassword = 'esp2025';
+
+        passwordForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (passwordInput.value === correctPassword) {
+                passwordOverlay.style.display = 'none';
+                mainContent.classList.remove('hidden');
+            } else {
+                errorMessage.classList.remove('hidden');
+                passwordInput.value = '';
+                passwordInput.focus();
+                // Adiciona uma pequena vibração para feedback de erro
+                passwordOverlay.querySelector('div').classList.add('animate-shake');
+                setTimeout(() => {
+                     passwordOverlay.querySelector('div').classList.remove('animate-shake');
+                }, 400);
+            }
+        });
+        
+        // Estilo para a animação de "shake"
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes shake {
+                10%, 90% { transform: translateX(-1px); }
+                20%, 80% { transform: translateX(2px); }
+                30%, 50%, 70% { transform: translateX(-4px); }
+                40%, 60% { transform: translateX(4px); }
+            }
+            .animate-shake {
+                animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
+            }
+        `;
+        document.head.appendChild(style);
+
+
+        // Lógica do Quiz
         const quizData = [
             {
                 question: "Qual é o principal objetivo do Value-Based Health Care (VBHC)?",
@@ -347,9 +422,4 @@
 
 </body>
 </html>
-
-
-
-
-
 
